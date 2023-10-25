@@ -23,6 +23,8 @@ namespace Service_Management_System
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
+            
+            LoadRecord1();
             LoadRecord();
         }
 
@@ -67,6 +69,22 @@ namespace Service_Management_System
         }
 
 
+        public void LoadRecord1()
+        {
+            int i = 0;
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select Oil_name from oilchange_tbl", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                i += 1;
+                comboBox1.Items.Add(dr["Oil_name"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
+        
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {

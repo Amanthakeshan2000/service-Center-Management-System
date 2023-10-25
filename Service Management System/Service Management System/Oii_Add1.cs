@@ -24,7 +24,8 @@ namespace Service_Management_System
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
-          
+            oil_list a1 = new oil_list();
+            a1.LoadRecord();
 
         }
 
