@@ -71,20 +71,20 @@ namespace Service_Management_System
 
         public void LoadRecord1()
         {
-            int i = 0;
             dataGridView1.Rows.Clear();
             cn.Open();
             cm = new SqlCommand("select Oil_name from oilchange_tbl", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
-            {
-                i += 1;
+            {             
                 comboBox1.Items.Add(dr["Oil_name"].ToString());
             }
             dr.Close();
             cn.Close();
         }
         
+
+ 
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -148,7 +148,14 @@ namespace Service_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (MessageBox.Show("Are you sure you want to delete this Oil? ", "Delete Oil", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cn.Open();
+                cm = new SqlCommand("delete from service_tbl where service_name like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", cn);
+                cm.ExecuteNonQuery();
+                cn.Close();
+                LoadRecord();
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -226,6 +233,49 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox7.Clear();
                 textBox3.ResetText();
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-1DA8EH9\\SQLEXPRESS;Initial Catalog=Auto_Flash_Database;Integrated Security=True"))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("addingOils", connection))
+                    {
+                        // Set the CommandType to StoredProcedure
+                        command.CommandType = CommandType.StoredProcedure;
+                        try
+                        {
+                            // Add parameters and execute the stored procedure
+                            command.ExecuteNonQuery();
+                        }
+                        catch { }
+
+                       
+                
+
+                        command.Parameters.AddWithValue("@service_name", SqlDbType.VarChar).Value = comboBox1.Text;
+                       // command.Parameters.AddWithValue("@price", SqlDbType.Int).Value = textBox8.Text;
+                        command.Parameters.AddWithValue("@qty", SqlDbType.Float).Value = textBox8.Text;
+
+
+
+                        command.ExecuteNonQuery();
+                    }
+
+
+                }
+            }
+            catch { }
+            finally
+            {
+                LoadRecord();
+                textBox8.Clear();
+                comboBox1.ResetText();
             }
         }
     }

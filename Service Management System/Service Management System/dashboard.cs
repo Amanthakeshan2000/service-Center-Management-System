@@ -135,7 +135,13 @@ namespace Service_Management_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+
+            if (MessageBox.Show("Are You Sure You Want to Close This Application?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
