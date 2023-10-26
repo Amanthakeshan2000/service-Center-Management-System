@@ -38,12 +38,14 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.part_list1 = new Service_Management_System.part_list();
             this.home_Page1 = new Service_Management_System.home_Page();
             this.oil_list1 = new Service_Management_System.oil_list();
             this.vehicle_list1 = new Service_Management_System.vehicle_list();
@@ -163,6 +165,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(174)))));
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -173,6 +176,21 @@
             this.panel2.Size = new System.Drawing.Size(1433, 67);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(96)))), ((int)(((byte)(148)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(814, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(226, 43);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Parts";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button3
             // 
@@ -243,6 +261,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.part_list1);
             this.panel3.Controls.Add(this.home_Page1);
             this.panel3.Controls.Add(this.oil_list1);
             this.panel3.Controls.Add(this.vehicle_list1);
@@ -253,6 +272,15 @@
             this.panel3.Size = new System.Drawing.Size(1433, 933);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // part_list1
+            // 
+            this.part_list1.BackColor = System.Drawing.Color.White;
+            this.part_list1.Location = new System.Drawing.Point(0, -1);
+            this.part_list1.Name = "part_list1";
+            this.part_list1.Size = new System.Drawing.Size(1433, 933);
+            this.part_list1.TabIndex = 5;
+            this.part_list1.Visible = false;
             // 
             // home_Page1
             // 
@@ -341,5 +369,7 @@
         private vehicle_list vehicle_list1;
         private oil_list oil_list1;
         private home_Page home_Page1;
+        private System.Windows.Forms.Button button5;
+        private part_list part_list1;
     }
 }

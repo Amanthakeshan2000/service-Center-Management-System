@@ -115,6 +115,7 @@ C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-Sy
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.Oii_Add1.resources
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.oil_list.resources
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.Oil_Update.resources
+C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.part_list.resources
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.Properties.Resources.resources
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.service.resources
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.vehicle.resources
@@ -124,3 +125,4 @@ C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-Sy
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service Management System.csproj.CoreCompileInputs.cache
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service Management System.exe
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service Management System.pdb
+C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.part_Add1.resources

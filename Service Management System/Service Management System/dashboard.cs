@@ -197,5 +197,28 @@ namespace Service_Management_System
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void part_list1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            part_list pl = new part_list();
+            panel3.Controls.Add(pl);
+            pl.Show();
+            pl.BringToFront();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+   
+        }
     }
 }

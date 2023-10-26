@@ -1,6 +1,6 @@
 ﻿namespace Service_Management_System
 {
-    partial class oil_list
+    partial class part_list
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(oil_list));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(part_list));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,7 @@
             this.panel1.Location = new System.Drawing.Point(25, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 886);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -78,6 +79,7 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column7,
             this.Column6,
             this.Column5,
             this.Column4,
@@ -111,15 +113,20 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column2.HeaderText = "Oil ID";
+            this.Column2.HeaderText = "Part ID";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 76;
+            this.Column2.Width = 87;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Oil Name";
+            this.Column3.HeaderText = "Part Name";
             this.Column3.Name = "Column3";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Brand";
+            this.Column7.Name = "Column7";
             // 
             // Column6
             // 
@@ -130,14 +137,14 @@
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.HeaderText = "Price (1L)";
+            this.Column5.HeaderText = "Price";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 105;
+            this.Column5.Width = 71;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Oil Stork(L)";
+            this.Column4.HeaderText = "Part Stork";
             this.Column4.Name = "Column4";
             // 
             // Edit
@@ -190,18 +197,17 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 29);
+            this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Oil Manage";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Part Manage";
             // 
-            // oil_list
+            // part_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Name = "oil_list";
+            this.Name = "part_list";
             this.Size = new System.Drawing.Size(1433, 933);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -216,11 +222,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

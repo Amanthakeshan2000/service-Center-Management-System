@@ -1,6 +1,6 @@
 ﻿namespace Service_Management_System
 {
-    partial class Oii_Add1
+    partial class part_Add1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oii_Add1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(part_Add1));
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -48,39 +50,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             this.SuspendLayout();
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(163, 207);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 26);
+            this.label7.TabIndex = 103;
+            this.label7.Text = "Brand";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(351, 204);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 33);
+            this.textBox1.TabIndex = 104;
+            // 
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(351, 355);
+            this.txtStock.Location = new System.Drawing.Point(351, 383);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(328, 33);
-            this.txtStock.TabIndex = 74;
+            this.txtStock.TabIndex = 102;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(163, 358);
+            this.label6.Location = new System.Drawing.Point(163, 386);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 26);
-            this.label6.TabIndex = 73;
+            this.label6.TabIndex = 101;
             this.label6.Text = "Stock(L)";
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(351, 297);
+            this.txtPrice.Location = new System.Drawing.Point(351, 325);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(328, 33);
-            this.txtPrice.TabIndex = 72;
+            this.txtPrice.TabIndex = 100;
             // 
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(351, 237);
+            this.txtDescription.Location = new System.Drawing.Point(351, 265);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(328, 33);
-            this.txtDescription.TabIndex = 71;
+            this.txtDescription.TabIndex = 99;
             // 
             // panel1
             // 
@@ -89,8 +109,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 45);
-            this.panel1.TabIndex = 70;
+            this.panel1.Size = new System.Drawing.Size(915, 45);
+            this.panel1.TabIndex = 98;
             // 
             // label1
             // 
@@ -99,29 +119,29 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(20, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 26);
+            this.label1.Size = new System.Drawing.Size(87, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Add Oil";
+            this.label1.Text = "Add Part";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(538, 411);
+            this.pictureBox4.Location = new System.Drawing.Point(538, 445);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(144, 44);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabIndex = 97;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // btnSave
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(351, 411);
+            this.btnSave.Location = new System.Drawing.Point(351, 445);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(144, 44);
             this.btnSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnSave.TabIndex = 68;
+            this.btnSave.TabIndex = 96;
             this.btnSave.TabStop = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -129,63 +149,65 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(163, 180);
+            this.label2.Location = new System.Drawing.Point(163, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 26);
-            this.label2.TabIndex = 62;
+            this.label2.TabIndex = 90;
             this.label2.Text = "Part Name";
             // 
             // txtOil_Name
             // 
             this.txtOil_Name.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOil_Name.Location = new System.Drawing.Point(351, 177);
+            this.txtOil_Name.Location = new System.Drawing.Point(351, 144);
             this.txtOil_Name.Name = "txtOil_Name";
             this.txtOil_Name.Size = new System.Drawing.Size(328, 33);
-            this.txtOil_Name.TabIndex = 63;
+            this.txtOil_Name.TabIndex = 91;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(163, 121);
+            this.label3.Location = new System.Drawing.Point(163, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 26);
-            this.label3.TabIndex = 64;
+            this.label3.TabIndex = 92;
             this.label3.Text = "Part ID";
             // 
             // txtOil_ID
             // 
             this.txtOil_ID.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOil_ID.Location = new System.Drawing.Point(351, 118);
+            this.txtOil_ID.Location = new System.Drawing.Point(351, 85);
             this.txtOil_ID.Name = "txtOil_ID";
             this.txtOil_ID.Size = new System.Drawing.Size(328, 33);
-            this.txtOil_ID.TabIndex = 65;
+            this.txtOil_ID.TabIndex = 93;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(163, 240);
+            this.label4.Location = new System.Drawing.Point(163, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 26);
-            this.label4.TabIndex = 66;
+            this.label4.TabIndex = 94;
             this.label4.Text = "Description";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(163, 300);
+            this.label5.Location = new System.Drawing.Point(163, 328);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 26);
-            this.label5.TabIndex = 67;
+            this.label5.TabIndex = 95;
             this.label5.Text = "Price";
             // 
-            // Oii_Add1
+            // part_Add1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 530);
+            this.ClientSize = new System.Drawing.Size(915, 536);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPrice);
@@ -200,10 +222,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Oii_Add1";
+            this.Name = "part_Add1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Oii_Add1";
-            this.Load += new System.EventHandler(this.Oii_Add1_Load);
+            this.Text = "part_Add1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -215,6 +236,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtPrice;

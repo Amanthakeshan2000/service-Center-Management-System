@@ -25,7 +25,9 @@ namespace Service_Management_System
             cn = new SqlConnection(dbcon.MyConnection());
             
             LoadRecord1();
-            LoadRecord();
+            LoadRecord(); 
+            LoadRecord2();
+
         }
 
         private void service_Load(object sender, EventArgs e)
@@ -82,9 +84,21 @@ namespace Service_Management_System
             dr.Close();
             cn.Close();
         }
-        
 
- 
+
+        public void LoadRecord2()
+        {
+            dataGridView1.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("select part_name from part_tbl", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBox4.Items.Add(dr["part_name"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+        }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -277,6 +291,11 @@ namespace Service_Management_System
                 textBox8.Clear();
                 comboBox1.ResetText();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

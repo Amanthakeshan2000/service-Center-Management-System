@@ -57,6 +57,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // btnSave
             // 
@@ -163,7 +164,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
