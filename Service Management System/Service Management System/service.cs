@@ -27,6 +27,7 @@ namespace Service_Management_System
             LoadRecord1();
             LoadRecord(); 
             LoadRecord2();
+            GenerateID();
 
         }
 
@@ -109,8 +110,36 @@ namespace Service_Management_System
         {
 
         }
+  
 
- 
+
+        private void GenerateID()
+        {
+
+            cn.Open();
+            cm = new SqlCommand("Select Max(service_id) from service_full_details_sample", cn);
+            dr = cm.ExecuteReader();
+            string newId = string.Format("SID-{0}-00001", DateTime.Now.Year);
+            if (dr.HasRows)
+            {
+                string prefix = string.Format("SID-{0}", DateTime.Now.Year);
+                while (dr.Read())
+                {
+
+                    string maxId = dr[0].ToString();
+                    if (!string.IsNullOrWhiteSpace(maxId) && maxId.StartsWith(prefix))
+                    {
+                        int count = Convert.ToInt32(maxId.Split('-')[2]);
+                        newId = string.Format("SID-{0}-{1:00000}", DateTime.Now.Year, count + 1);
+                    }
+                }
+            }
+            textBox5.Text = newId;
+            cn.Close();
+        }
+
+
+
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
