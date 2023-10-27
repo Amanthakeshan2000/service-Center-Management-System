@@ -58,15 +58,15 @@ namespace Service_Management_System
 
 
 
-                Oil_Update o5 = new Oil_Update(this);
+                Oil_Update1 oo = new Oil_Update1(this);
                 //cu.txtNIC.Text = dataGridView11[e.ColumnIndex,2].Value.ToString();
-                o5.txtOil_ID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                o5.txtOil_Name.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                o5.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                o5.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                o5.txtStock.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                oo.txtOil_ID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                oo.txtOil_Name.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                oo.txtDescription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                oo.txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                oo.txtStock.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-                o5.Show();
+                oo.Show();
 
             }
             else

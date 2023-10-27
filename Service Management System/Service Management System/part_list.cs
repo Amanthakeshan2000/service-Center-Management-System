@@ -60,8 +60,17 @@ namespace Service_Management_System
             {
 
 
+                part_Update cuss = new part_Update(this);
+                //cu.txtNIC.Text = dataGridView11[e.ColumnIndex,2].Value.ToString();
+                cuss.txtNIC.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cuss.txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cuss.textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cuss.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cuss.txtMobile_no.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cuss.txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-            
+                cuss.Show();
+
 
             }
             else

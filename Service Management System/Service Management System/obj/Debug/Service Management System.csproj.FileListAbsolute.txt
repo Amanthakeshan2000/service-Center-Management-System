@@ -126,3 +126,5 @@ C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-Sy
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service Management System.exe
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service Management System.pdb
 C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.part_Add1.resources
+C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.part_Update.resources
+C:\Users\Amantha Keshan\OneDrive - NSBM\Desktop\GIT\service-Center-Management-System\Service Management System\Service Management System\obj\Debug\Service_Management_System.Oil_Update1.resources

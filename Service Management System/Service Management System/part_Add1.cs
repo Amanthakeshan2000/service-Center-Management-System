@@ -41,8 +41,8 @@ namespace Service_Management_System
 
                     cm.Parameters.AddWithValue("@part_ID", txtOil_ID.Text);
                     cm.Parameters.AddWithValue("@part_name", txtOil_Name.Text);
-                    cm.Parameters.AddWithValue("@brand", txtDescription.Text);
-                    cm.Parameters.AddWithValue("@description", txtPrice.Text);
+                    cm.Parameters.AddWithValue("@brand", textBox1.Text);
+                    cm.Parameters.AddWithValue("@description", txtDescription.Text);
                     cm.Parameters.AddWithValue("@price", txtPrice.Text);
                     cm.Parameters.AddWithValue("@qty", txtStock.Text);
 

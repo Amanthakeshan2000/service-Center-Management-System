@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Service_Management_System
 {
@@ -120,15 +121,14 @@ namespace Service_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             try
             {
                 cn.Open();
-                string selectQuery = "Select * from customer_tbl where NIC =" + txtNIC1.Text;
-                cm = new SqlCommand(selectQuery, cn);
+                string selectCustomerQuery = "SELECT * FROM customer_tbl WHERE NIC LIKE @NIC";
+                cm = new SqlCommand(selectCustomerQuery, cn);
+                cm.Parameters.AddWithValue("@NIC", "%" + txtNIC1.Text + "%");
 
                 dr = cm.ExecuteReader();
-                int i = 0;
 
                 if (dr.Read())
                 {
@@ -136,39 +136,39 @@ namespace Service_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("No Customer Register.");
+                    MessageBox.Show("No Customer Found.");
                 }
-                cn.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
-            finally
-            {
-                int i = 0;
-                dataGridView2.Rows.Clear();
-                cn.Open();
-                string selectQuery = "Select * from vehicle_tbl where OwnerNIC =" + txtNIC1.Text;
-                cm = new SqlCommand(selectQuery, cn);
+                dr.Close();
 
-                //cm = new SqlCommand("select * from vehicle_tbl order by VehicleNo", cn);
+                // Now fetch related vehicle data
+                string selectVehiclesQuery = "SELECT VehicleNo FROM vehicle_tbl WHERE OwnerNIC = @OwnerNIC";
+                cm = new SqlCommand(selectVehiclesQuery, cn);
+                cm.Parameters.AddWithValue("@OwnerNIC", txtNIC1.Text);
 
                 dr = cm.ExecuteReader();
+
+                int i = 0;
+                dataGridView2.Rows.Clear();
+
                 while (dr.Read())
                 {
                     i += 1;
                     dataGridView2.Rows.Add(dr["VehicleNo"].ToString());
                 }
-                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection in the finally block to ensure it gets closed even if an exception occurs.
                 cn.Close();
             }
-
-
         }
 
-       
+
 
         private void vehicle_Load(object sender, EventArgs e)
         {

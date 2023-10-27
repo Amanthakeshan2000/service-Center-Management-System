@@ -5,15 +5,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Xml.Linq;
 
 namespace Service_Management_System
 {
-    public partial class Oil_Update : UserControl
+    public partial class Oil_Update1 : Form
     {
 
         SqlConnection cn = new SqlConnection();
@@ -21,16 +20,11 @@ namespace Service_Management_System
         DBConnection dbcon = new DBConnection();
         SqlDataReader dr;
         oil_list oil;
-        public Oil_Update(oil_list oils)
+        public Oil_Update1(oil_list oils)
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
             oil = oils;
-        }
-
-        private void Oil_Update_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
