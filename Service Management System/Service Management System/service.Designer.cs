@@ -41,6 +41,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.service_name = new System.Windows.Forms.ComboBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -85,10 +91,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -181,6 +187,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.textBox12);
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textBox10);
@@ -234,6 +244,74 @@
             this.panel1.Size = new System.Drawing.Size(1391, 880);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(689, 779);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(173, 33);
+            this.textBox11.TabIndex = 65;
+            this.textBox11.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Location = new System.Drawing.Point(1116, 673);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(251, 46);
+            this.panel3.TabIndex = 64;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Red;
+            this.label22.Location = new System.Drawing.Point(8, 4);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(68, 36);
+            this.label22.TabIndex = 63;
+            this.label22.Text = "0.00";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(903, 678);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(207, 36);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "Total Price :   Rs.";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(423, 804);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 44);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pictureBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox1.ForeColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(261, 804);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 44);
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.Text = "Add";
+            this.pictureBox1.UseVisualStyleBackColor = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // textBox10
             // 
@@ -700,33 +778,14 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 5;
             // 
-            // pictureBox1
+            // textBox12
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pictureBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pictureBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictureBox1.ForeColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 804);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 44);
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.Text = "Add";
-            this.pictureBox1.UseVisualStyleBackColor = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(423, 804);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 44);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.textBox12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(669, 686);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(173, 33);
+            this.textBox12.TabIndex = 66;
+            this.textBox12.Visible = false;
             // 
             // service
             // 
@@ -741,6 +800,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -812,5 +873,10 @@
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox12;
     }
 }

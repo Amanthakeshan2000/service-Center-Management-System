@@ -15,20 +15,32 @@ namespace Service_Management_System
     {
 
 
-        SqlConnection cn = new SqlConnection();
+        SqlConnection cn = new SqlConnection(); 
+        SqlConnection cnn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
+        SqlCommand cmm = new SqlCommand();
         SqlDataReader dr;
+        SqlDataReader drr;
         DBConnection dbcon = new DBConnection();
         public service()
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
-            
+            cnn = new SqlConnection(dbcon.MyConnection());
+
             LoadRecord1();
              
             LoadRecord2();
             GenerateID();
             LoadRecord();
+            getSum();
+            //getQty();
+
+
+
+
+
+
 
         }
 
@@ -120,7 +132,9 @@ namespace Service_Management_System
         {
 
         }
-  
+
+      
+
 
 
         private void GenerateID()
@@ -197,6 +211,7 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox9.Clear();
                 service_name.ResetText();
+                getSum();
             }
 
      
@@ -213,6 +228,7 @@ namespace Service_Management_System
                 cm.ExecuteNonQuery();
                 cn.Close();
                 LoadRecord();
+                getSum();
             }
         }
 
@@ -257,6 +273,7 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox4.Clear();
                 textBox2.ResetText();
+                getSum();
             }
         }
 
@@ -301,7 +318,79 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox7.Clear();
                 textBox3.ResetText();
+                getSum();
             }
+        }
+
+        public float getQty()
+        {
+
+            try
+            {
+                cn.Open();
+                string selectQuery = "SELECT * FROM oilchange_tbl WHERE Oil_name LIKE @Oil_name";
+                cm = new SqlCommand(selectQuery, cn);
+                cm.Parameters.AddWithValue("@Oil_name", "%" + comboBox1.Text + "%");
+
+                dr = cm.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    textBox11.Text = dr["Price"].ToString();
+                }
+                else
+                {
+                    //MessageBox.Show("No Vehicle Register.");
+                }
+
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+
+            //textBox11.Text = "100";
+            float qty = float.Parse(textBox11.Text);
+            return qty;
+         
+        
+        }
+
+
+        public float getQty1()
+        {
+
+            try
+            {
+                cn.Open();
+                string selectQuery = "SELECT * FROM part_tbl WHERE part_name LIKE @part_name";
+                cm = new SqlCommand(selectQuery, cn);
+                cm.Parameters.AddWithValue("@part_name", "%" + comboBox4.Text + "%");
+
+                dr = cm.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    textBox12.Text = dr["price"].ToString();
+                }
+                else
+                {
+                   // MessageBox.Show("No Vehicle Register.");
+                }
+
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+
+            //textBox11.Text = "100";
+            float qty1 = float.Parse(textBox12.Text);
+            return qty1;
+
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -335,7 +424,11 @@ namespace Service_Management_System
                         command.Parameters.AddWithValue("@service_ID", SqlDbType.VarChar).Value = textBox5.Text;
                         command.Parameters.AddWithValue("@service_date", SqlDbType.VarChar).Value = dateTimePicker1.Text;
 
+                        float floatValue1 = float.Parse(textBox8.Text); 
+                        float floatValue2 = getQty();
 
+                        command.Parameters.AddWithValue("@price", SqlDbType.Float).Value = floatValue1 * floatValue2;
+                        
 
                         command.ExecuteNonQuery();
                     }
@@ -349,6 +442,7 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox8.Clear();
                 comboBox1.ResetText();
+                getSum();
             }
         }
 
@@ -374,14 +468,14 @@ namespace Service_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("No Vehicle Register.");
+                    
                 }
 
                 cn.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Select Oil");
             }
         }
 
@@ -416,7 +510,10 @@ namespace Service_Management_System
                         command.Parameters.AddWithValue("@service_ID", SqlDbType.VarChar).Value = textBox5.Text;
                         command.Parameters.AddWithValue("@service_date", SqlDbType.VarChar).Value = dateTimePicker1.Text;
 
+                        float floatValue1 = float.Parse(textBox10.Text);
+                        float floatValue2 = getQty1();
 
+                        command.Parameters.AddWithValue("@price", SqlDbType.Float).Value = floatValue1 * floatValue2;
 
                         command.ExecuteNonQuery();
                     }
@@ -430,6 +527,7 @@ namespace Service_Management_System
                 LoadRecord();
                 textBox10.Clear();
                 comboBox4.ResetText();
+                getSum();
             }
         }
 
@@ -454,6 +552,32 @@ namespace Service_Management_System
 
          
         }
+
+        public void getSum()
+        {
+            string connectionString = "Data Source=DESKTOP-1DA8EH9\\SQLEXPRESS;Initial Catalog=Auto_Flash_Database;Integrated Security=True";
+
+            try{
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.CalculateSum2()", connection))
+                    {
+                        double result = Convert.ToDouble(command.ExecuteScalar()); // Change data type to double
+                                                                                   //MessageBox.Show(result.ToString());
+
+                        label22.Text = result.ToString();
+                    }
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show("New Service");
+            }
+
+         
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
