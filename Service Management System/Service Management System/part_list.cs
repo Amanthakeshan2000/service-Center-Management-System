@@ -67,7 +67,7 @@ namespace Service_Management_System
                 cuss.textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cuss.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cuss.txtMobile_no.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                cuss.txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cuss.txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
 
                 cuss.Show();
 
