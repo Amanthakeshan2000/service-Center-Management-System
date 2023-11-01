@@ -59,5 +59,10 @@ namespace Service_Management_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

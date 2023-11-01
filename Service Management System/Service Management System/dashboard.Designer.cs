@@ -38,6 +38,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.all_service_Vehicle1 = new Service_Management_System.all_service_Vehicle();
             this.part_list1 = new Service_Management_System.part_list();
             this.home_Page1 = new Service_Management_System.home_Page();
             this.oil_list1 = new Service_Management_System.oil_list();
@@ -165,6 +167,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(174)))));
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -176,6 +179,21 @@
             this.panel2.Size = new System.Drawing.Size(1433, 67);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(96)))), ((int)(((byte)(148)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(1081, 12);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(226, 43);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Bill";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -261,6 +279,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.all_service_Vehicle1);
             this.panel3.Controls.Add(this.part_list1);
             this.panel3.Controls.Add(this.home_Page1);
             this.panel3.Controls.Add(this.oil_list1);
@@ -272,6 +291,14 @@
             this.panel3.Size = new System.Drawing.Size(1433, 933);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // all_service_Vehicle1
+            // 
+            this.all_service_Vehicle1.Location = new System.Drawing.Point(0, -1);
+            this.all_service_Vehicle1.Name = "all_service_Vehicle1";
+            this.all_service_Vehicle1.Size = new System.Drawing.Size(1433, 933);
+            this.all_service_Vehicle1.TabIndex = 6;
+            this.all_service_Vehicle1.Visible = false;
             // 
             // part_list1
             // 
@@ -371,5 +398,7 @@
         private home_Page home_Page1;
         private System.Windows.Forms.Button button5;
         private part_list part_list1;
+        private System.Windows.Forms.Button button6;
+        private all_service_Vehicle all_service_Vehicle1;
     }
 }

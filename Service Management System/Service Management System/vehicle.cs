@@ -186,5 +186,13 @@ namespace Service_Management_System
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            service se=new service();
+            Controls.Add(se);
+            se.BringToFront();
+            se.Show();
+        }
     }
 }

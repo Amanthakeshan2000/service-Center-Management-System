@@ -221,15 +221,14 @@ namespace Service_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this Oil? ", "Delete Oil", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+           
                 cn.Open();
                 cm = new SqlCommand("delete from service_tbl where service_name like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", cn);
                 cm.ExecuteNonQuery();
                 cn.Close();
                 LoadRecord();
                 getSum();
-            }
+          
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -251,15 +250,12 @@ namespace Service_Management_System
                         }
                         catch { }
                         command.Parameters.AddWithValue("@service_name", SqlDbType.VarChar).Value = textBox4.Text;
-                        //command.Parameters.AddWithValue("@qty", SqlDbType.Int).Value = textBox8.Text;
                         command.Parameters.AddWithValue("@price", SqlDbType.Float).Value = textBox2.Text;
 
                         command.Parameters.AddWithValue("@vehicle_no", SqlDbType.VarChar).Value = textBox1.Text;
                         command.Parameters.AddWithValue("@owner_name", SqlDbType.VarChar).Value = textBox6.Text;
                         command.Parameters.AddWithValue("@service_ID", SqlDbType.VarChar).Value = textBox5.Text;
                         command.Parameters.AddWithValue("@service_date", SqlDbType.VarChar).Value = dateTimePicker1.Text;
-
-
 
                         command.ExecuteNonQuery();
                     }

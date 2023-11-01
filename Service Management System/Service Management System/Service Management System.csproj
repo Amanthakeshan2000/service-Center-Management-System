@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -47,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all_service_Vehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="all_service_Vehicle.Designer.cs">
+      <DependentUpon>all_service_Vehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="analyse_Part.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +179,9 @@
     <Compile Include="vehicle_Update.Designer.cs">
       <DependentUpon>vehicle_Update.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="all_service_Vehicle.resx">
+      <DependentUpon>all_service_Vehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="analyse_Part.resx">
       <DependentUpon>analyse_Part.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +248,7 @@
     <EmbeddedResource Include="vehicle_Update.resx">
       <DependentUpon>vehicle_Update.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

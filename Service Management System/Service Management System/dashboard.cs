@@ -220,5 +220,13 @@ namespace Service_Management_System
         {
    
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            all_service_Vehicle pl = new all_service_Vehicle();
+            panel3.Controls.Add(pl);
+            pl.Show();
+            pl.BringToFront();
+        }
     }
 }
